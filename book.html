@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Book Ticket</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</head>
+
+<body>
+
+<!-- ✅ COMMON HEADER -->
+{% include 'header.html' %}
+
+<!-- 🔥 BOOKING SECTION -->
+<div class="form-container">
+
+    <div class="form-card">
+
+        <h2>Passenger Details</h2>
+
+        <form method="post" onsubmit="return validateBooking()">
+
+            <div id="passenger-list">
+
+                <!-- PASSENGER -->
+                <div class="passenger">
+
+    <input type="text" name="name[]" placeholder="Full Name" class="name">
+
+    <input type="number" name="age[]" placeholder="Age">
+
+    <select name="gender[]">
+        <option value="">Gender</option>
+        <option>Male</option>
+        <option>Female</option>
+    </select>
+
+    <select name="preference[]">
+        <option value="">Seat</option>
+        <option>Lower</option>
+        <option>Middle</option>
+        <option>Upper</option>
+        <option>Side Lower</option>
+        <option>Side Upper</option>
+    </select>
+
+    <button type="button" class="remove-btn" onclick="removePassenger(this)">✖</button>
+
+</div>
+
+            </div>
+
+            <!-- ADD PASSENGER -->
+            <button type="button" class="add-btn" onclick="addPassenger()">
+                + Add Passenger
+            </button>
+
+            <!-- SUBMIT -->
+            <button class="btn">Confirm Booking</button>
+
+        </form>
+
+    </div>
+
+</div>
+
+</body>
+</html>
