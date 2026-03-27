@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>IRCTC Clone</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+    <!-- FONT -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- ✅ USE COMMON HEADER -->
+{% include 'header.html' %}
+
+<!-- 🔥 FULL BACKGROUND -->
+<div class="hero">
+
+    <div class="overlay">
+
+        <div class="left-panel">
+
+            <!-- TABS -->
+            <div class="tabs">
+                <button class="tab active">BOOK TICKET</button>
+                <button class="tab">PNR STATUS</button>
+            </div>
+
+            <!-- FORM -->
+            <div class="booking-box">
+
+                <form action="/search" method="post" onsubmit="return validateSearch()">
+
+                    <!-- FROM / TO -->
+                    <div class="row">
+                        <input type="text" name="source" placeholder="From Station">
+                        <button type="button" class="swap" onclick="swapStations()">⇄</button>
+                        <input type="text" name="destination" placeholder="To Station">
+                    </div>
+
+                    <!-- DATE + CLASS -->
+                    <div class="row">
+                        <input type="date" name="date">
+
+                        <select name="class">
+                            <option>All Classes</option>
+                            <option>AC First Class (1A)</option>
+                            <option>AC 2 Tier (2A)</option>
+                            <option>AC 3 Tier (3A)</option>
+                            <option>Sleeper (SL)</option>
+                        </select>
+                    </div>
+
+                    <!-- QUOTA -->
+                    <div class="row">
+                        <select name="quota">
+                            <option>GENERAL</option>
+                            <option>TATKAL</option>
+                            <option>LADIES</option>
+                            <option>PREMIUM TATKAL</option>
+                        </select>
+                    </div>
+
+                    <!-- OPTIONS -->
+                    <div class="options">
+                        <label><input type="checkbox"> Flexible With Date</label>
+                        <label><input type="checkbox"> Senior Citizen</label>
+                    </div>
+
+                    <!-- BUTTON -->
+                    <button class="btn">Search Trains</button>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>
