@@ -1,0 +1,418 @@
+/* 🔥 RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    background: #f3f6fb;
+}
+
+
+/* 🔵 HEADER */
+.top-strip {
+    text-align: center;
+    font-size: 12px;
+    padding: 5px;
+    background: #f1f1f1;
+}
+
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background: white;
+    border-bottom: 1px solid #ddd;
+}
+
+.logo {
+    height: 60px;
+}
+
+.left, .right {
+    width: 20%;
+}
+
+.center {
+    width: 60%;
+    text-align: center;
+}
+
+/* MENU */
+.menu {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+}
+
+.menu li {
+    position: relative;
+}
+
+.menu a {
+    text-decoration: none;
+    color: black;
+    font-size: 14px;
+}
+
+/* LOGIN BUTTON */
+.login-btn {
+    background: #003366;
+    color: white !important;
+    padding: 6px 12px;
+    border-radius: 3px;
+}
+
+/* HIGHLIGHT */
+.highlight {
+    background: #2c4a8a;
+    color: white !important;
+    padding: 6px 10px;
+}
+
+
+/* 🔥 DROPDOWN */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 30px;
+    left: 0;
+    width: 250px;
+    background: white;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+}
+
+.dropdown-menu li {
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+/* SUBMENU */
+.submenu {
+    position: relative;
+}
+
+.submenu-list {
+    display: none;
+    position: absolute;
+    left: 100%;
+    top: 0;
+    width: 200px;
+    background: white;
+}
+
+.submenu:hover .submenu-list {
+    display: block;
+}
+
+
+/* 🔥 HERO */
+.hero {
+    height: 90vh;
+    background: url("../images/train.png") no-repeat center;
+    background-size: cover;
+}
+
+.overlay {
+    background: rgba(255,255,255,0.55);
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.left-panel {
+    width: 520px;
+    margin-left: 80px;
+}
+
+
+/* 🔷 TABS */
+.tabs {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.tab {
+    flex: 1;
+    padding: 12px;
+    background: #eaeaea;
+    border: none;
+    cursor: pointer;
+}
+
+.tab.active {
+    background: #003366;
+    color: white;
+}
+
+
+/* 🔷 BOOKING BOX */
+.booking-box {
+    background: white;
+    padding: 28px;
+    border-radius: 12px;
+    box-shadow: 0px 6px 20px rgba(0,0,0,0.2);
+}
+
+
+/* 🔷 FORM ROW */
+.row {
+    display: grid;
+    grid-template-columns: 1fr 50px 1fr;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.row:nth-child(2) {
+    grid-template-columns: 1fr 1fr;
+}
+
+.row:nth-child(3) {
+    grid-template-columns: 1fr;
+}
+
+
+/* INPUT */
+input, select {
+    height: 42px;
+    padding: 10px;
+    border: 1px solid #dcdfe3;
+    border-radius: 5px;
+}
+
+input:focus, select:focus {
+    border-color: #003366;
+    box-shadow: 0 0 4px rgba(0,51,102,0.3);
+}
+
+
+/* BUTTON */
+.btn {
+    width: 100%;
+    height: 45px;
+    background: #fb792b;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: #e0661f;
+}
+
+
+/* 🔥 FORM PAGES */
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+
+.form-card {
+    width: 400px;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 20px rgba(0,0,0,0.2);
+}
+
+.form-card input,
+.form-card select {
+    width: 100%;
+    margin-bottom: 12px;
+}
+
+
+/* 🔥 TRAIN CARDS */
+
+.train-card {
+    width: 85%;
+    margin: 20px auto;
+    padding: 20px 25px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Header */
+.train-header {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+/* Route row */
+.train-body {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+/* Classes row */
+.classes {
+    margin: 10px 0;
+}
+
+.classes span {
+    display: inline-block;
+    margin-right: 10px;
+    padding: 6px 10px;
+    background: #f1f1f1;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+.classes span.active {
+    background: #003366;
+    color: white;
+}
+
+/* Availability */
+.availability {
+    font-size: 13px;
+    margin-top: 5px;
+    color: #444;
+}
+
+/* Runs */
+.runs {
+    font-size: 13px;
+    margin: 5px 0;
+    color: #666;
+}
+
+/* Button */
+.book-btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 14px;
+    background: #f26c21;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.book-btn.disabled {
+    background: gray;
+    pointer-events: none;
+}
+
+
+.booking-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.booking-card {
+    width: 450px;
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+}
+
+/* Passenger row */
+.passenger {
+    display: grid;
+    grid-template-columns: 1fr 80px 100px 120px 40px;
+    gap: 10px;
+    margin-bottom: 10px;
+    align-items: center;
+}
+
+/* Inputs */
+.passenger input,
+.passenger select {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* REMOVE BUTTON (FIXED) */
+.passenger button {
+    background: #ff4d4d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    height: 35px;
+    cursor: pointer;
+}
+
+/* ADD BUTTON */
+button[type="button"] {
+    background: #003366;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* CONFIRM BUTTON */
+.btn {
+    width: 100%;
+    padding: 12px;
+    background: #f26c21;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 15px;
+    cursor: pointer;
+}
+/* 🔥 PASSENGER FIX */
+
+.passenger {
+    display: grid;
+    grid-template-columns: 2.5fr 80px 130px 150px 40px;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+/* NAME FIELD FIX */
+.passenger .name {
+    min-width: 180px;
+}
+
+/* INPUT FIX */
+.passenger input,
+.passenger select {
+    height: 38px;
+    padding: 6px 8px;
+    font-size: 14px;
+}
+
+/* REMOVE BUTTON */
+.remove-btn {
+    background: #0a2f5a;
+    color: #ff4d4d;
+    font-size: 16px;
+    border: none;
+    height: 38px;
+    width: 38px;
+    border-radius: 6px;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.form-card {
+    width: 650px;
+}
