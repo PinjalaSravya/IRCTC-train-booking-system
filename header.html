@@ -1,0 +1,72 @@
+<!-- 🔵 TOP STRIP -->
+<div class="top-strip">
+    25-Mar-2026 | A- | A | A+ | हिंदी
+</div>
+
+<!-- 🔵 MAIN HEADER -->
+<div class="main-header">
+
+    <!-- LEFT LOGO -->
+    <div class="left">
+        <img src="{{ url_for('static', filename='images/indian_railway.png') }}" class="logo">
+    </div>
+
+    <!-- CENTER MENU -->
+    <div class="center">
+
+        <ul class="menu">
+
+            {% if not hide_auth %}
+            <li>
+                <a href="/login" class="login-btn">LOGIN / REGISTER</a>
+            </li>
+            {% endif %}
+
+            <!-- 🔥 TRAINS DROPDOWN -->
+            <li class="dropdown">
+                <a href="#" class="active">TRAINS</a>
+
+                <ul class="dropdown-menu">
+
+                    <li><a href="/">Book Ticket</a></li>
+                    <li><a href="#">Foreign Tourist Booking</a></li>
+                    <li><a href="#">Connecting Journey Booking</a></li>
+
+                    <!-- 🔥 SUBMENU -->
+                    <li class="submenu">
+                        <span>IRCTC TRAINS ▶</span>
+
+                        <ul class="submenu-list">
+                            <li><a href="#">Train Schedule</a></li>
+                            <li><a href="#">Live Status</a></li>
+                            <li><a href="#">Seat Availability</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="#">Cancel E-Ticket</a></li>
+                    <li><a href="#">PNR Enquiry</a></li>
+                    <li><a href="#">Track Your Train</a></li>
+                    <li><a href="#">FTR Coach Booking</a></li>
+                    <li><a href="#">Dogs/Cats Booking</a></li>
+                    <li><a href="#">Link Aadhaar</a></li>
+
+                </ul>
+            </li>
+
+            <li><a href="#">MEALS</a></li>
+            <li><a href="#" class="highlight">LOYALTY</a></li>
+            <li><a href="#">E-WALLET</a></li>
+            <li><a href="#">ALERTS</a></li>
+            <li><a href="#">OTHER SERVICES</a></li>
+            <li><a href="#">CONTACT US</a></li>
+
+        </ul>
+
+    </div>
+
+    <!-- RIGHT LOGO -->
+    <div class="right">
+        <img src="{{ url_for('static', filename='images/irctc_logo.png') }}" class="logo">
+    </div>
+
+</div>
