@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Register</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+<!-- ✅ HEADER -->
+{% include 'header.html' %}
+
+<!-- 🔥 REGISTER SECTION -->
+<div class="form-container">
+
+    <div class="form-card">
+
+        <h2>Create Your IRCTC Account</h2>
+
+        <form method="post" onsubmit="return validateRegister()">
+
+            <input type="text" name="username" placeholder="Username">
+
+            <input type="text" name="fullname" placeholder="Full Name">
+
+            <input type="password" name="password" placeholder="Password">
+
+            <input type="password" name="confirm_password" placeholder="Confirm Password">
+
+            <input type="email" name="email" placeholder="Email">
+
+            <input type="number" name="age" placeholder="Age">
+
+            <select name="gender">
+                <option value="">Select Gender</option>
+                <option>Male</option>
+                <option>Female</option>
+            </select>
+
+            <input type="text" name="phone" placeholder="Mobile Number">
+
+            <button class="btn">REGISTER</button>
+
+        </form>
+
+        <p>Already have account? <a href="/login">Login</a></p>
+
+    </div>
+
+</div>
+
+</body>
+</html>
