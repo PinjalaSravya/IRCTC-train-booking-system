@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Train Results</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</head>
+
+<body>
+
+<!-- ✅ COMMON HEADER -->
+{% include 'header.html' %}
+
+<h2 class="title">Available Trains</h2>
+
+{% for train in trains %}
+<div class="train-card">
+
+    <!-- TRAIN NAME -->
+    <div class="train-header">
+        <b>{{train[2]}}</b> ({{train[1]}})
+    </div>
+
+    <!-- ROUTE -->
+    <div class="train-body">
+        <span>{{train[3]}}</span>
+        <span>→</span>
+        <span>{{train[4]}}</span>
+
+        <div class="time">
+            {{train[5]}} - {{train[6]}}
+        </div>
+    </div>
+
+    <!-- CLASS SELECTION -->
+    <div class="classes">
+        <span onclick="selectClass(this, 'SL')">SL</span>
+        <span onclick="selectClass(this, '3A')">3A</span>
+        <span onclick="selectClass(this, '2A')">2A</span>
+        <span onclick="selectClass(this, '1A')">1A</span>
+    </div>
+
+    <!-- AVAILABILITY -->
+    <div class="availability">
+        Select class to check availability
+    </div>
+
+    <!-- RUNNING DAYS -->
+    <div class="runs">
+        Runs on: M T W T F S S
+    </div>
+
+    <!-- BOOK BUTTON -->
+   <a href="/book/{{train[0]}}" id="bookBtn" class="book-btn disabled">
+    Book Now
+</a>
+</div>
+{% endfor %}
+
+</body>
+</html>
