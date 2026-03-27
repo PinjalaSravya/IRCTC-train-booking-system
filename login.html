@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+<!-- ✅ HEADER (ONLY ONCE, CORRECT PLACE) -->
+{% include 'header.html' %}
+
+<!-- 🔥 LOGIN SECTION -->
+<div class="form-container">
+
+    <div class="form-card">
+
+        <h2>LOGIN</h2>
+
+        <form method="post" onsubmit="return validateLogin()">
+
+            <input type="text" name="username" placeholder="Username">
+
+            <input type="password" name="password" placeholder="Password">
+
+            <button class="btn">SIGN IN</button>
+
+        </form>
+
+        <p>New user? <a href="/register">Register</a></p>
+
+    </div>
+
+</div>
+
+</body>
+</html>
